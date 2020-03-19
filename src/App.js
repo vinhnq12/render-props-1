@@ -14,7 +14,7 @@ export default function App() {
     <div className="App">
       <Lists data={data} render={item => <List item={item} />} />
       <Lists data={data} render={item => <List1 item={item} />} />
-      <Counter render={value => <Number number={value} />} />
+      <Counter>{state => <Number number={state.number} />}</Counter>
     </div>
   );
 }
