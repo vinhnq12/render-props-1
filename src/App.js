@@ -1,11 +1,17 @@
 import React from "react";
 import "./styles.css";
 
+import Lists from "./components/Lists";
+import List from "./components/List";
+import List1 from "./components/List1";
+
+const data = ["a", "b", "c"];
+
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Lists data={data} render={item => <List item={item} />} />
+      <Lists data={data} render={item => <List1 item={item} />} />
     </div>
   );
 }
